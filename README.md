@@ -1,0 +1,1 @@
+Course project files for the [Angular - The Complete Guide (2022 Edition)](https://www.udemy.com/course/the-complete-guide-to-angular-2/) course

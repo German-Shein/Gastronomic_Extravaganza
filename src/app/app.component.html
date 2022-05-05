@@ -1,0 +1,13 @@
+<application-header (Change_the_Displayed_Component_Event)="Change_the_Displayed_Component ($event)"></application-header>
+<div class="container">
+	<div class="row" *ngIf="Recipe_Book_Display_Status">
+		<div class="col-md-12">
+			<recipe-book></recipe-book>
+		</div>
+	</div>
+	<div class="row" *ngIf="Shopping_List_Display_Status">
+		<div class="col-md-12">
+			<shopping-list></shopping-list>
+		</div>
+	</div>
+</div>

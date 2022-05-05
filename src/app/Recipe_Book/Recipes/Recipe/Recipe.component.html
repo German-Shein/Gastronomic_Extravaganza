@@ -1,0 +1,11 @@
+<div class="col-md-12">
+	<a class="list-group-item clearfix" href="#">
+		<div class="pull-left">
+			<h4 class="list-group-item-heading">{{Recipe_Item.Name}}</h4>
+			<p class="list-group-item-text">{{Recipe_Item.Description}}</p>
+		</div>
+		<span class="pull-right">
+			<img alt="{{Recipe_Item.Name + ': ' + Recipe_Item.Description}}" class="img-responsive Recipe_Image" [src]="Recipe_Item.Image_URL">
+		</span>
+	</a>
+</div>

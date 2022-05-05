@@ -1,0 +1,11 @@
+<div class="row">
+	<div class="col-md-4">
+		<recipes (Select_the_Recipe_Event)="Recipe_Item = $event"></recipes>
+	</div>
+	<div class="col-md-8">
+		<description *ngIf="Recipe_Item; else Recipe_Non_Selection_Status" [Recipe_Item]="Recipe_Item"></description>
+		<ng-template #Recipe_Non_Selection_Status>
+			<p>Please select a Recipe!</p>
+		</ng-template>
+	</div>
+</div>

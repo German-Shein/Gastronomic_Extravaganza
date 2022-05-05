@@ -1,0 +1,14 @@
+<div class="row">
+	<div class="col-md-12">
+		<editor (Add_an_Ingredient_Event)="Add_an_Ingredient ($event);"></editor>
+		<hr>
+		<ul class="list-group">
+			<a class="list-group-item Ingredients" href="#" *ngFor="let Ingredient_Item of Ingredients">{{Ingredient_Item.Name}}: {{Ingredient_Item.Amount}} {{Ingredient_Item.Amount === 1 ? 'piece' : 'pieces'}}</a>
+		</ul>
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-12">
+		<items></items>
+	</div>
+</div>
