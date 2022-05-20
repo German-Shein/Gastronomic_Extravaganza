@@ -8,8 +8,8 @@
 		</div>
 		<div class="navbar-collapse" [class.collapse]="Collapse_Status" (window:resize)="Collapse_Status = true;">
 			<ul class="nav navbar-nav">
-				<li><a (click)="Change_the_Displayed_Component (true, false);" href="javascript: void (0);">Recipe Book</a></li>
-				<li><a (click)="Change_the_Displayed_Component (false, true);" href="javascript: void (0);">Shopping List</a></li>
+				<li><a (click)="Change_the_Displayed_Component ('Recipe Book');" href="javascript: void (0);">Recipe Book</a></li>
+				<li><a (click)="Change_the_Displayed_Component ('Shopping List');" href="javascript: void (0);">Shopping List</a></li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
 				<li class="dropdown" Dropdown>

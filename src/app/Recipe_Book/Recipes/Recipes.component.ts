@@ -1,18 +1,27 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { Recipe } from './Recipe/Recipe.model';
+import { Recipes_Service } from './Recipes.service';
 
 @Component ({
 	selector: 'recipes',
 	templateUrl: './Recipes.component.html',
-	styleUrls: ['./Recipes.component.css']
+	styleUrls: ['./Recipes.component.css'],
+	providers: [Recipes_Service]
 })
+
 export class Recipes_Component
 {
-	Recipes: Recipe [] =
-	[
-		new Recipe ('A Badass Burger', 'Grease, meat, garbage bread, I don\'t know', 'https://qph.fs.quoracdn.net/main-qimg-64c07583904e2b8f3a4a7aeb10a8eebc.webp'),
-		new Recipe ('GIGANTIC PIZZA!', 'CHEESE, BEEF, TOMATO SAUCE AND JALAPEÑOS TO BURN YOUR MOUTH', 'https://img.onmanorama.com/content/dam/mm/en/food/features/images/2021/10/17/pizza.jpg.transform/schema-16x9/image.jpg')
-	];
+	Recipes: Recipe [];
+
+	constructor (private Recipes_Service_Instance: Recipes_Service)
+	{
+
+	}
+
+	ngOnInit ()
+	{
+		this.Recipes = this.Recipes_Service_Instance.Get_Recipes ();
+	}
 
 	@Output () Select_the_Recipe_Event = new EventEmitter <Recipe> ();
 

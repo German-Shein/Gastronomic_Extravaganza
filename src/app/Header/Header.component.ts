@@ -6,13 +6,14 @@ import { Dropdown_Directive } from '../Shared_Components/Dropdown.directive';
 	templateUrl: './Header.component.html',
 	styleUrls: ['./Header.component.css']
 })
+
 export class Header_Component
 {
 	Collapse_Status: boolean = true;
-	@Output () Change_the_Displayed_Component_Event = new EventEmitter <{Recipe_Book_Display_Status: boolean, Shopping_List_Display_Status: boolean}> ();
+	@Output () Change_the_Displayed_Component_Event = new EventEmitter <string> ();
 
-	Change_the_Displayed_Component (Recipe_Book_Display_Status: boolean, Shopping_List_Display_Status: boolean): void
+	Change_the_Displayed_Component (Page: string): void
 	{
-		this.Change_the_Displayed_Component_Event.emit ({Recipe_Book_Display_Status: Recipe_Book_Display_Status, Shopping_List_Display_Status: Shopping_List_Display_Status});
+		this.Change_the_Displayed_Component_Event.emit (Page);
 	}
 }

@@ -5,14 +5,13 @@ import { Component } from '@angular/core';
 	templateUrl: './app.component.html',
 	styleUrls: ['./app.component.css']
 })
+
 export class AppComponent
 {
-	Recipe_Book_Display_Status: boolean = true;
-	Shopping_List_Display_Status: boolean = false;
+	Page: string = "Recipe Book"
 
-	Change_the_Displayed_Component (Statuses): void
+	Change_the_Displayed_Component (Page: string): void
 	{
-		this.Recipe_Book_Display_Status = Statuses.Recipe_Book_Display_Status;
-		this.Shopping_List_Display_Status = Statuses.Shopping_List_Display_Status;
+		this.Page = Page;
 	}
 }
